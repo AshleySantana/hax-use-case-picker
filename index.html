@@ -35,22 +35,35 @@
     h1{
       text-align: center;
     }
+    .stickyContainer{
+      position:sticky;
+      left: 0;
+    }
+    .cardList{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+
+    }
   </style>
   <title>hax-use-case-picker</title>
 </head>
 
 <body>
+<div class="body">
 <div class="headerMenu"></div>
 <h1>New Journey</h1>
 <p>Choose what journey you want to build! (create, make, develop) (microcopy). Maybe add description of what their doing? Jorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus urna at turpis condimentum lobortis. </p>
 
-<sidebar-filter filterTitle="Template">
-  <template-checkbox checkboxLabel="Course"></template-checkbox>
-</sidebar-filter>
-
 <card-attribute attributeName="Dark Mode Compatible" image="https://images.ctfassets.net/ni9rh5nu0d99/659UpS14dds9Xkmo8VrhGj/53e0bf3b45c9a89bee1071c87398934d/academics-penn-state.jpg?fm=webp&w=1080&q=75"></card-attribute>
+<br><br>
 
-<div>
+<div class="stickyContainer">
+  <sidebar-filter filterTitle="Template">
+    <template-checkbox checkboxLabel="Course"></template-checkbox>
+  </sidebar-filter>
+
+<div class="cardList">
   <use-case-card cardTitle="Portfolio" image="https://images.ctfassets.net/ni9rh5nu0d99/659UpS14dds9Xkmo8VrhGj/53e0bf3b45c9a89bee1071c87398934d/academics-penn-state.jpg?fm=webp&w=1080&q=75" templateDescription="Unlock your 
   creativity and technical skills by designing a dynamic website 
   for your course, where you'll showcase your projects and share 
@@ -66,7 +79,7 @@
   for your course, where you'll showcase your projects and share 
   valuable resources."></use-case-card>
 </div>
-
+</div>
   <script type="module" src="./lib/use-case-card.js"></script>
   <script type="module" src="./lib/sidebar-filter.js"></script>
   <script type="module" src="./lib/template-checkbox.js"></script>
@@ -74,6 +87,6 @@
 
 
   
-
+</div>
 </body>
 </html>
