@@ -28,11 +28,35 @@
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
+    .headerMenu{
+      height: 48px;
+      background-color: black;
+    }
+    h1{
+      text-align: center;
+    }
   </style>
   <title>hax-use-case-picker</title>
 </head>
 
 <body>
+<div class="headerMenu"></div>
+<h1>New Journey</h1>
+<p>Choose what journey you want to build! (create, make, develop) (microcopy). Maybe add description of what their doing? Jorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus urna at turpis condimentum lobortis. </p>
+
+
+<div>
+  <input type="text" placeholder="Search..">
+      <h4 class="categoryName">${this.categoryName}</h4>
+      <div>
+          <slot>
+
+          </slot>
+      </div>
+      <h4 id="myFavoritesLink">ekjvqw;k</h4>
+      <a href="page 2.html">Click here for page 2!</a>
+</div>
+
 
 <div>
   <use-case-card cardTitle="Portfolio" image="https://images.ctfassets.net/ni9rh5nu0d99/659UpS14dds9Xkmo8VrhGj/53e0bf3b45c9a89bee1071c87398934d/academics-penn-state.jpg?fm=webp&w=1080&q=75" templateDescription="Unlock your 
@@ -52,6 +76,10 @@
 </div>
 
   <script type="module" src="./lib/use-case-card.js"></script>
+  <script type="module" src="./lib/sidebar-filter.js"></script>
+
+
+  
 
 </body>
 </html>
